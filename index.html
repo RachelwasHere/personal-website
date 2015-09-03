@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!-- main CSS -->
+	<link rel="stylesheet" href="main.css">
+
+	<!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+	<title>Rachel L. Williams</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<div class="row verticalAlign">
+				<div class="col-sm-1 " id="contact">
+					<ul id="socialMedia">
+						<li><a href="http://www.twitter.com/RLW_44"><i class="fa fa-twitter-square fa-3x"></i></a>
+						</li>
+						<li><a href="https://www.linkedin.com/in/rachelinfrance"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+						<li><a href="https://github.com/RachelwasHere"><i class="fa fa-github-square fa-3x"></i></a></li>
+						<li><a href="mailto:rachelinfrance@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-11">
+					<h1>Hello, I'm Rachel</h1>
+					<h2>I'm a PhD student, English teacher, and aspiring web developer living in the west of France.</h2>
+					<p>This site is a work in progress, check back soon!</p>
+				</div>
+			</div>
+		</header>
+		
+	<div class="row main">
+		<!-- each section has a div "col" and a div following it so the first div gives padding around bg image of second -->
+		<div class="col-md-8 codingPad mobilePad">
+			<div class="coding"> 
+			<div class="coding-text description">
+				<div class="title">
+					<h3>	Coding	</h3>
+				</div>
+				<p class="fp-description p-coding">
+					I've taken online classes in HTML5/CSS3, Bootstrap, and jQuery. I'm currently learning JavaScript, Python, and PHP. <span class="accent">Check out my projects. </span> 
+				</p>
+			</div> <!-- closes Coding-text div -->
+			</div><!-- closes Coding div -->
+		</div><!-- closes column -->
+
+		<div class="col-md-4 teachingPad mobilePad">
+			<div class="teaching">
+			<div class="teaching-text  description">
+				<div class="title">
+					<h3>	Teaching English	</h3>
+				</div>
+				<p class="fp-description p-teaching">
+					I've taught English as a foreign language to students of all ages and levels for <span class="accent"> 5 years</span>. 
+				</p> 
+			</div> <!-- closes Teaching-text div -->
+			</div> <!-- closes Teaching div -->
+		</div>
+	</div> <!-- closes row of Teaching/coding info -->
+
+	<div class="row main">
+		<div class="col-md-4 researchPad mobilePad description">
+			<div class="research">
+			<div class="research-text">
+				<div class="title">
+					<h3>	PhD Research	</h3>
+				</div>
+				<p class="fp-description p-research">
+					I am currently researching the <span class="accent">representation of migration in Irish visual arts since 2000</span>. My Master's research examined postcards of the Easter Rising.
+				</p>
+			</div> <!-- closes Research-text div -->
+			</div> <!-- closes Research div -->
+		</div> <!-- closes column -->
+	
+		<div class="col-md-8 bschoolPad mobilePad description">
+			<div class="bschool">
+			<div class="bschool-text">
+				<div class="title">
+					<h3>	The Digital Classroom	</h3>
+				</div>
+				<p class="fp-description p-bschool">
+					I'm taking advantage of MOOCs offered by the Wharton school,  UIUC, and Yonsei University to learn more about marketing and communication.  <span class="accent"><a href="#">Read more here (soon)</a></span>.
+				</p>
+			</div> <!-- closes Bschool-text div -->
+			</div> <!-- closes Bschool div -->
+		</div> <!-- closes column -->
+	</div> <!-- closes row of Research/Bschool info -->
+	<footer>
+		<p>Site created by Rachel L. Williams. No known copyright on images.</p>
+	</footer>
+</div><!-- closes container -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		if (document.documentElement.clientWidth > 767) {
+			$(".fa-envelope").toggleClass("fa-3x fa-2x");
+			$(".fa-github-square").toggleClass("fa-3x fa-2x");
+			$(".fa-twitter-square").toggleClass("fa-3x fa-2x");
+			$(".fa-linkedin-square").toggleClass("fa-3x fa-2x");
+
+			$(".p-research").hide();
+        	$(".research").hover(function(){
+            $(".p-research").toggle(400);
+        	 });
+
+
+       		$(".p-teaching").hide();
+        	$(".teaching").hover(function(){
+            $(".p-teaching").toggle(400);
+        	 });
+
+	        $(".p-coding").hide();
+	        $(".coding").hover(function(){
+            $(".p-coding").toggle(400);
+         	});
+   
+			$(".p-bschool").hide();
+			$(".bschool").hover(function(){
+            $(".p-bschool").toggle(400);
+    	 	});
+
+    	 	$(".fa").mouseenter(function(){
+    	   $(this).addClass("fa-4x");
+         });
+
+        $(".fa").mouseleave(function(){
+    	   $(this).removeClass("fa-4x");
+         });
+		} else {
+			$(".p-research").hide()
+
+       $(".research").click(function(){
+           $(".p-research").toggle(400);
+       });
+
+       $(".research").click(function(){
+           $(".research-text").toggleClass("open");
+       });
+    
+       
+
+    $(".p-coding").hide()
+
+       $(".coding").click(function(){
+           $(".p-coding").toggle(400);
+       });
+
+       $(".coding").click(function(){
+           $(".coding-text").toggleClass("open");
+       });
+
+
+
+    $(".p-teaching").hide()
+
+       $(".teaching").click(function(){
+            $(".p-teaching").toggle(400);
+       });
+
+       $(".teaching").click(function(){
+           $(".teaching-text").toggleClass("open");
+       });
+
+      
+       
+
+    $(".p-bschool").hide()
+
+       $(".bschool").click(function(){
+            $(".p-bschool").toggle(400);
+       });
+
+       $(".bschool").click(function(){
+           $(".bschool-text").toggleClass("open");
+       });
+
+  
+		}
+
+		
+	});
+
+	</script>
+</body>
+</html>

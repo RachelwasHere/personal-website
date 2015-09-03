@@ -1,0 +1,200 @@
+* {
+	-webkit-box-sizing: border-box;
+	-mos-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(250, 250, 250);
+	font-family: 'Roboto Slab', serif;
+	max-width: 1000px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	min-margin-left: 10px;
+	min-margin-right: 10px;
+}
+
+h1, h2, h3, li { 
+	font-family: 'Lato', sans-serif;
+} 
+
+p {
+	font-size: 1.3em;
+}
+
+h3  {
+	color: #E0B425;
+}
+
+#socialMedia a {
+	color: #E0B425;
+	text-shadow: 1.3px 1.3px 2px black;
+}
+.accent, .accent a {
+	color: black;
+	font-weight: bold; 
+}
+
+
+
+
+.title {
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+
+}
+#contact {
+	height: 100%;
+	overflow: none;
+	position: relative;
+
+}
+
+#socialMedia {
+	list-style-type: none;
+	margin: auto;
+	width: 100%;
+ 	}
+
+#socialMedia li {
+	display: inline-block;
+	margin-right: 10%;
+}
+
+#socialMedia li:last-of-type {
+	margin-right: none;
+}
+
+
+/* MAIN PAGE ONLY*/
+
+.fp-description {  /* for text on main 
+					page over images*/
+	margin-bottom: 15px;
+	line-height: 1.75;
+	padding: 10px;
+
+}
+
+.coding {
+	background-image: url("images/code.jpg");
+	height: 300px;
+	position: relative;
+}
+
+.teaching {
+	position: relative;
+	background-image: url("images/teaching.jpg");
+	height: 300px;
+	background-size: cover;
+}
+
+.research {
+	height: 300px;
+	position: relative;
+	background-image: url("images/research.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bschool {
+	position: relative;
+	background-image: url("images/bschool.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+	
+}
+
+.mobilePad {
+	margin-bottom: 15px;
+}
+
+.coding-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 10px;
+	background-color: rgba(230, 230, 230, .9);
+	box-shadow: 0 5px 5px rgba( 255, 255, 255, .4);
+}
+
+.bschool-text {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	right: 10px;
+	margin: 10px -10px 0 -7px;
+	background-color: rgba(230, 230, 230, .9);
+	box-shadow: 0 5px 5px rgba( 255, 255, 255, .4);
+
+}
+
+
+
+
+.description h3 {
+	margin: 0 0 5px 0; /* Top and side margins are important, 
+		keep size of background to the right height, width */
+}
+
+.research-text, .teaching-text {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+		margin: 10px -10px 0 -10px;
+		background-color: rgba(230, 230, 230, .9);
+		box-shadow: 0 5px 5px rgba( 255, 255, 255, .4);
+
+}
+
+@media (min-width: 768px) { 
+
+
+	.verticalAlign {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#socialMedia li {
+		display: block;
+		margin-bottom: 5%;
+		margin-left: -30px;
+	}
+
+	#socialMedia li:last-of-type {
+		margin-bottom: none;
+	}
+	
+}
+
+
+@media (min-width: 992px) {
+
+	.codingPad {
+		padding: 0 5px 5px 0;
+
+	}
+	
+	.teachingPad {
+		padding: 0 0 0 5px;
+	}
+	
+	.researchPad {
+		padding: 5px 5px 10px 0;
+	}
+
+	.bschoolPad {
+		padding: 5px 0 10px 5px;
+	}
+
+	.mobilePad {
+	margin-bottom: 0px;
+	}
+} 
